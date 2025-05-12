@@ -1,10 +1,17 @@
-import { Module } from '@nestjs/common';
+import { Module, OnModuleInit } from '@nestjs/common';
 import { ClientsModule } from '../clients/clients.module';
-import { TelegramModule } from './telegram.module';
+import { OpenAiModule } from '../openai/openai.module';
+import { TelegramService } from './telegram.service';
 
 @Module({
-  imports: [ClientsModule, TelegramModule],
-  providers: [],
-  exports: [],
+  imports: [ClientsModule, OpenAiModule],
+  providers: [TelegramService],
+  exports: [TelegramService],
 })
-export class AgentModule {}
+export class AgentModule implements OnModuleInit {
+  constructor(private readonly telegramService: TelegramService) {}
+
+  onModuleInit() {
+    this.telegramService.init();
+  }
+}
