@@ -14,7 +14,7 @@ the following feature is do ....
     data: Omit<Client, "id" | "status" | "createdAt" | "updatedAt">
   ) {
     fetch("http://localhost:3000/clients/mock-lead", {
-      method: "POST",
+      method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     })
