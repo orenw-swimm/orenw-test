@@ -50,7 +50,7 @@ Using GET with a body is unusual and may be a backend constraint or a quick prot
     data: Omit<Client, "id" | "status" | "createdAt" | "updatedAt">
   ) {
     fetch("http://localhost:3000/clients/mock-lead", {
-      method: "GET",
+      method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     })
