@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import ClientForm from "../components/ClientForm";
-// import ClientsTable from "../components/ClientsTable";
 import StatusFilter from "../components/StatusFilter";
 import ClientActionsPanel from "../components/ClientActionsPanel";
 import { Client } from "../types/types";
