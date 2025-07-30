@@ -3,7 +3,7 @@ title: First doc
 ---
 the following feature is do ....
 
-<SwmSnippet path="/crm-client/src/pages/ClientsPage.tsx" line="30">
+<SwmSnippet path="/crm-client/src/pages/ClientsPage.tsx" line="29">
 
 ---
 
@@ -14,7 +14,7 @@ the following feature is do ....
     data: Omit<Client, "id" | "status" | "createdAt" | "updatedAt">
   ) {
     fetch("http://localhost:3000/clients/mock-lead", {
-      method: "POST",
+      method: "GET",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     })
@@ -28,7 +28,7 @@ the following feature is do ....
 </SwmSnippet>
 
 \
-<SwmToken path="/crm-client/src/pages/ClientsPage.tsx" pos="68:5:5" line-data="      &lt;h1&gt;מערכת CRM&lt;/h1&gt;">`CRM`</SwmToken>\
+<SwmToken path="/crm-client/src/pages/ClientsPage.tsx" pos="67:5:5" line-data="      &lt;h1&gt;מערכת CRM&lt;/h1&gt;">`CRM`</SwmToken>\
 \
 <SwmPath>[crm-client/…/pages/ClientsPage.tsx](/crm-client/src/pages/ClientsPage.tsx)</SwmPath>\
 \
